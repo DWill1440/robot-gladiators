@@ -3,11 +3,11 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+var enemyName = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function(enemyNames) {
+var fight = function(enemyName) {
      // fight function statements
 }
  // Alert users that they are starting the round
@@ -19,20 +19,20 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
  enemyHealth = enemyHealth - playerAttack;
  // Log a resulting message to the console so we know that it worked.
  console.log(
-    playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining."
+    playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
   );
  // check enemy's health
 if (enemyHealth <= 0) {
-    window.alert(enemyNames + " has died!");
+    window.alert(enemyName + " has died!");
   } 
 else {
-    window.alert(enemyNames + " still has " + enemyHealth + " health left.");
+    window.alert(enemyName + " still has " + enemyHealth + " health left.");
   }
  // Subtract the value of `enemyAttack` from the value of `playerHealth` and use that result to update the value in the `playerHealth` variable.
  playerHealth = playerHealth - enemyAttack;
  // Log a resulting message to the console so we know that it worked.
  console.log(
-    enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+    enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
   );  
 // check player's health
 if (playerHealth <= 0) {
@@ -62,6 +62,8 @@ else {
     window.alert("You need to pick a valid option. Try again!");
   }
  
-for(var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i])
-}
+  for(var i = 0; i < enemyName.length; i++) {
+    console.log(enemyName[i]);
+    console.log(i);
+    console.log(enemyName[i] + " is at " + i + " index");
+  }
